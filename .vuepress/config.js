@@ -3,9 +3,18 @@ module.exports = {
   description: 'Just playing around',
   base:'', // 如果你想将你的网站部署到 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/"
   head: [
-    ['link', { rel: 'icon', href: '/assets/img/LOGO.png' }]
+    ['link', { rel: 'icon', href: '/assets/img/LOGO.png' }],
+    // 百度收录
+    ['script', { type: 'text/javascript', src: '/assets/sitemap/baidu.js' }],
+    ['meta', { name: 'keywords', content: 'ccc,jschen,陈程城,vue,前端,web前端,前端基础,bind,apply,call,prototype,tcp/ip,TCP/IP,webpack,nuxt,event-loop,作用域链,执行上下文,js,jschen,javaScript,new,class,es6,new 实质,node,babel,ci/cd,CI/CD,vue源码,前端进阶,' }]
   ],
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
   themeConfig: {
+    lastUpdated: '更新时间', // string | boolean
     logo: '/assets/img/LOGO.png',
     sidebar: 'auto',
     nav: [
@@ -17,7 +26,7 @@ module.exports = {
             text: 'javaScript基础', 
             items: [
               { text: '基础知识', link: '/guide/' },
-              { text: '函数式编程', link: '/前端架构之路/函数式编程/' },
+              { text: '函数式编程', link: '/前端架构之路/javaScript基础/函数式编程/' },
               { text: 'es6', link: 'https://google.com' },
               { text: '异步编程', link: 'https://google.com' },
               { text: '设计模式', link: 'https://google.com' },
@@ -75,5 +84,12 @@ module.exports = {
       { text: '关于', link: '/关于/' },
       { text: 'GitHub', link: 'https://github.com/guestccc' },
     ]
+  },
+  plugins: {
+    // 谷歌收录
+    // 'sitemap': {
+    //   hostname: 'https://blog.jschen.cc'
+    // },
+    // 百度收录 -- 准备自己开源一个
   }
 }
