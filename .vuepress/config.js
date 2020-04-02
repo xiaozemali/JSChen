@@ -17,7 +17,7 @@ module.exports = {
             text: 'javaScript基础', 
             items: [
               { text: '基础知识', link: '/guide/' },
-              { text: '函数', link: 'https://google.com' },
+              { text: '函数式编程', link: '/前端架构之路/函数式编程/' },
               { text: 'es6', link: 'https://google.com' },
               { text: '异步编程', link: 'https://google.com' },
               { text: '设计模式', link: 'https://google.com' },
@@ -72,6 +72,7 @@ module.exports = {
           { text: '随笔1', link: '/随笔/随笔1/' },
         ]
       },
+      { text: '关于', link: '/关于/' },
       { text: 'GitHub', link: 'https://github.com/guestccc' },
     ]
   }
