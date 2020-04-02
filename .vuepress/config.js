@@ -67,7 +67,11 @@ module.exports = {
           { text: 'js基础', link: '/面试/js基础/' },
         ]
       },
-      { text: '随笔', link: '/随笔' },
+      { text: '随笔',
+        items: [
+          { text: '随笔1', link: '/随笔/随笔1/' },
+        ]
+      },
       { text: 'GitHub', link: 'https://github.com/guestccc' },
     ]
   }
