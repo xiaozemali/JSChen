@@ -1,4 +1,4 @@
-<script>
+
 (function(){
     console.log('%c  ▄████ %c █    ██ %c▓█████ %c  ██████ %c▄▄▄█████▓%c ▄████▄  %c ▄████▄  %c ▄████▄  ', 'color: #5198EA;', 'color: #487FE5;', 'color: #4062DE;', 'color: #504BC9;', 'color: #7732A2;', 'color: #97278A;', 'color: #AD4694;', 'color: #C6689F;')
     console.log('%c ██▒ ▀█▒%c ██  ▓██▒%c▓█   ▀ %c▒██    ▒ %c▓  ██▒ ▓▒%c▒██▀ ▀█  %c▒██▀ ▀█  %c▒██▀ ▀█  ', 'color: #5198EA;', 'color: #487FE5;', 'color: #4062DE;', 'color: #504BC9;', 'color: #7732A2;', 'color: #97278A;', 'color: #AD4694;', 'color: #C6689F;')
@@ -21,4 +21,3 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script>
