@@ -1,7 +1,7 @@
 module.exports = {
-  title: '过客',
+  title: 'JSChen',
   description: 'Just playing around',
-  base:'/blog/', // 如果你想将你的网站部署到 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/"
+  base:'', // 如果你想将你的网站部署到 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/"
   head: [
     ['link', { rel: 'icon', href: '/assets/img/LOGO.png' }]
   ],
