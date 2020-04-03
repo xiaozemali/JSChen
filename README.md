@@ -2,7 +2,7 @@
 home: true
 heroImage: /assets/img/LOGO.png
 heroText: JSChen
-tagline: 个人技术提升的知识体系，终身学习的信仰
+tagline: 个人技术提升的知识体系，终身学习的信仰(新博客转移中，旧博客是Hexo做的，准备废弃掉...)
 actionText: 欢迎指点 →
 actionLink: /pages/guide/
 features:

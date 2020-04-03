@@ -10,7 +10,9 @@
 
 2. 原型对象是什么
 
-3. 什么是原型链
+3. constructor 属性
+
+4. 什么是原型链
 
 ## 原型是什么
 
@@ -39,9 +41,17 @@ console.log(JSChen.prototype)
 
 ![prototype1](/assets/img/prototype1.png)
 
-### 2. 再来理解一句话 [MDN 对象原型](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)
+### 2. 再来理解一句话 [MDN 继承与原型链](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
 > `JavaScript` 只有一种结构：对象。每个实例对象（ `object` ）都有一个私有属性（称之为 `__proto__` ）指向它的构造函数的原型对象（ `prototype` ）。该原型对象也有一个自己的原型对象( `__proto__` ) ，
+
+:::tip
+我感觉是mdn翻译错了哈
+
+讲道理，构造函数也有可能是其他构造函数的实例
+
+所以应该说是 `实例的原型` 而不是 `构造函数的原型`
+:::
 
 我们先来实例一个对象看看哈
 
@@ -134,6 +144,7 @@ var b = new Object() // 实例化操作
 
 - 原型是个对象
 - 函数 的 `prototype` 属性 指向一个 原型对象，实例对象 的 `__proto__` 属性 也指向指向一个 原型对象
+- 其实实例对象的原型对象就是其构造函数的原型
 - 原型其实就相当于一个模版
 
 
@@ -144,7 +155,49 @@ var b = new Object() // 实例化操作
 }
 ```
 
-::: tip
 
-这里有很多说法哈，有些博主
-:::
+## constructor属性
+
+每一个原型对象都有一个 `constructor` 属性， 指向构造函数本身
+
+```js
+function JSChen () {
+
+}
+var ccc = new JSChen()
+JSChen.prototype.constructor === JSChen
+ccc.__proto__.constructor === JSChen
+```
+
+`JSChen` 函数实例化了一个对象 `ccc` ，那么 `ccc.__proto__` 和 `JSChen.prototype` 指向实例对象 `ccc` 的原型
+
+而原型对象有一个 `constructor` 指向 实例对象的构造函数本身，也就是 `ccc.__proto__.constructor` 指向 `JSChen`
+
+也就是 `JSChen.prototype.constructor` 指向 `JSChen` 
+
+## 什么是原型链
+
+对象的 `__proto__` 属性指向他原型 也就是构造函数的 `prototype` 属性 `，prototype` 也是个对象，那么 `prototype` 的 `__proto__` 也指向他原型，这样，一层一层往上追溯，这种关系，就被称为 `原型链`
+
+例如： 
+
+```js
+function JSChen () {
+
+}
+var ccc = new JSChen()
+ccc.__proto__ === JSChen.prototype;
+JSChen.prototype.__proto__ === Object.prototype;
+Object.prototype.__proto__ === null;
+// true
+```
+![原型链](/assets/img/prototype3.png)
+
+实例对象 `ccc` 的 `__proto__` 指向他的原型，也就是 `JSChen.prototype` , `JSChen.prototype` 的 `__proto__` 指向他的原型， 也就是 `Object.prototype` , `Object.prototype` 的 `__proto__` 指向他的原型 也就是 `null`
+
+
+## 完整的原型构造函数关系图
+
+
+![原型链](/assets/img/prototype4.png)
+
