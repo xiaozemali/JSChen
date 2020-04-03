@@ -1,13 +1,12 @@
+const sidebar = require('./configs/sidebars');
+const nav = require('./configs/nav.js');
+const head = require('./configs/heads');
+
+
 module.exports = {
-  title: 'JSChen',
-  description: 'Just playing around',
+  title: `JSChen`,
   base:'', // 如果你想将你的网站部署到 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/"
-  head: [
-    ['link', { rel: 'icon', href: '/assets/img/LOGO.png' }],
-    // 百度收录
-    ['script', { type: 'text/javascript', src: '/assets/sitemap/baidu.js' }],
-    ['meta', { name: 'keywords', content: 'ccc,jschen,陈程城,vue,前端,web前端,前端基础,bind,apply,call,prototype,tcp/ip,TCP/IP,webpack,nuxt,event-loop,作用域链,执行上下文,js,jschen,javaScript,new,class,es6,new 实质,node,babel,ci/cd,CI/CD,vue源码,前端进阶,' }]
-  ],
+  head, // head 头部引入 js meta icon
   locales: {
     '/': {
       lang: 'zh-CN'
@@ -16,74 +15,393 @@ module.exports = {
   themeConfig: {
     lastUpdated: '更新时间', // string | boolean
     logo: '/assets/img/LOGO.png',
-    sidebar: 'auto',
-    nav: [
+    // sidebar: 'auto',
+    displayAllHeaders:true,
+    sidebar:{
+      // 前端架构 javaScript基础
+      '/pages/technology/architect/base/': [
+        {
+          title: '基础知识',
+          collapsable: true,
+          sidebarDepth: 1,
+          children:[
+            '',
+            'this',
+            'fp',
+            'test'
+          ]
+        },  /* /foo/one.html */
+        {
+          title: '函数式编程',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+        {
+          title: 'es6',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+        {
+          title: '设计模式',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+      ],
+      // 前端架构 计算机网络
+      '/pages/technology/architect/network/': [
+        {
+          title: '网络协议',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: '网络请求',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+        {
+          title: '网络安全',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: '模块加载',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+      ],
+      // 前端架构 vue
+      '/pages/technology/architect/vue/': [
+        {
+          title: 'Vue.js',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'Nuxt.js',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+        {
+          title: 'Vue源码解读',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: '组件架构',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+      ],
+      // 前端架构 计算机网络
+      '/pages/technology/architect/react/': [
+        {
+          title: 'react基础',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'redux',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+        {
+          title: 'Next',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'react native',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+      ],
+      // 前端架构 node
+      '/pages/technology/architect/node/': [
+        {
+          title: 'node基础',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'web服务express',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+      ],
+      // 前端架构 前端工程化
+      '/pages/technology/architect/engineering/': [
+        {
+          title: 'webpack',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'babel',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+        {
+          title: 'CI/CD',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+        {
+          title: '质量检测',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+        {
+          title: '编码规范',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+            'fp'
+          ]
+        }, 
+      ],
+      // 运维小兴趣 linux
+      '/pages/technology/ops/linux/': [
+        {
+          title: 'linux常用命令',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'linux其他',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },
+      ],
+      // 运维小兴趣 nginx
+      '/pages/technology/ops/nginx/': [
+        {
+          title: 'nginx常用命令',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'nginx配置',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },
+      ],
+      // 运维小兴趣 docker
+      '/pages/technology/ops/docker/': [
+        {
+          title: 'docker常用命令',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'docker其他',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },
+      ],
+      // 面试 面试题收录
+      '/pages/interview/included/': [
+        {
+          title: 'js基础类型',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'es6类型',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },
+        {
+          title: '计算机网络类型',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },
+      ],
+      // 面试 面试准备
+      '/pages/interview/plan/': [
+        {
+          title: '简历',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },  /* /foo/one.html */
+        {
+          title: 'markdown',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            '',
+          ]
+        },
+      ],
+      // 随笔
+      '/pages/essay/': [
+        {
+          title: 'jenkins',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            'jenkins',
+          ]
+        }, 
+      ],
+    },
+    nav:[
+      // 技术提升 technology
       {
-        text: '前端架构之路',
-        ariaLabel: '前端架构之路',
+        text: '技术提升',
         items: [
+          // 前端架构师之路 architect
           { 
-            text: 'javaScript基础', 
+            text: '前端架构师之路', 
             items: [
-              { text: '基础知识', link: '/guide/' },
-              { text: '函数式编程', link: '/前端架构之路/javaScript基础/函数式编程/' },
-              { text: 'es6', link: 'https://google.com' },
-              { text: '异步编程', link: 'https://google.com' },
-              { text: '设计模式', link: 'https://google.com' },
+              { text: 'javaScript基础', link: '/pages/technology/architect/base/' },
+              { text: '计算机网络', link: '/pages/technology/architect/network/' },
+              { text: 'Vue.js', link: '/pages/technology/architect/vue/' },
+              { text: 'React', link: '/pages/technology/architect/react/' },
+              { text: 'node', link: '/pages/technology/architect/node/' },
+              { text: '前端工程化', link: '/pages/technology/architect/engineering/' },
             ]
           },
+          // 运维小兴趣 OPS
           { 
-            text: '计算机网络',
+            text: '运维小兴趣', 
             items: [
-              { text: '网络协议', link: 'https://google.com' },
-              { text: '网络请求', link: 'https://google.com' },
-              { text: '网络安全', link: 'https://google.com' },
-              { text: '模块加载', link: 'https://google.com' },
-            ]
-          },
-          { 
-            text: 'Vue.js', 
-            items: [
-              { text: 'Vue.js', link: 'https://google.com' },
-              { text: 'Nuxt.js', link: 'https://google.com' },
-              { text: 'Vue源码解读', link: 'https://google.com' },
-              { text: '组件架构', link: 'https://google.com' },
-            ]
-          },
-          { text: 'React.js', link: 'https://google.com' },
-          { 
-            text: 'node.js', 
-            items: [
-              { text: '基础', link: 'https://google.com' },
-              { text: 'web服务express', link: 'https://google.com' },
-            ]
-          },
-          { 
-            text: '前端工程化', 
-            items: [
-              { text: 'webpack', link: 'https://google.com' },
-              { text: 'babel', link: 'https://google.com' },
-              { text: 'CI/CD', link: 'https://google.com' },
-              { text: '质量检测', link: 'https://google.com' },
-              { text: '编码规范', link: 'https://google.com' },
+              { text: 'linux', link: '/pages/technology/ops/linux/' },
+              { text: 'nginx', link: '/pages/technology/ops/nginx/' },
+              { text: 'docker', link: '/pages/technology/ops/docker/' },
             ]
           },
         ]
       },
+      // 面试 interview
       { 
         text: '面试', 
         items: [
-          { text: 'js基础', link: '/面试/js基础/' },
+          { 
+            text: '面试题收录', 
+            link: '/pages/interview/included/'
+          },
+          { 
+            text: '面试准备', 
+            link: '/pages/interview/plan/'
+          },
         ]
       },
-      { text: '随笔',
-        items: [
-          { text: '随笔1', link: '/随笔/随笔1/' },
-        ]
+      // 随笔 essay
+      { 
+        text: '随笔',
+        link: '/pages/essay/' 
       },
-      { text: '关于', link: '/关于/' },
+      { text: '关于', link: '/pages/about/' },
       { text: 'GitHub', link: 'https://github.com/guestccc' },
-    ]
+    ],
   },
   plugins: {
     // 谷歌收录

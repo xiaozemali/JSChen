@@ -4,16 +4,19 @@ heroImage: /assets/img/LOGO.png
 heroText: JSChen
 tagline: 个人技术提升的知识体系，终身学习的信仰
 actionText: 欢迎指点 →
-actionLink: /guide/
+actionLink: /pages/guide/
 features:
 - title: 前端架构
   details: 个人前端架构学习之路
 - title: 随笔
   details: 日常项目小坑，小白笔记
-# - title: 高性能
-#   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: 面试
+  details: 面试题解析
 footer: Copyright © 2018-present jschen
 ---
-
+<script>
+// 打印叶子
+console.log("%c ", "background: url(https://blog.jschen.cc/assets/img/LOGO.png) no-repeat center;padding-left:300px;padding-bottom: 242px")
+</script>
 
 <!-- <img :src="$withBase('/assets/img/LOGO.png')" alt="foo"> -->

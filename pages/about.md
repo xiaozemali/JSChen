@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 <!-- <h1 style="display:inline-block">陈程城</h1>/chengcheng chen -->
 
 # 陈程城

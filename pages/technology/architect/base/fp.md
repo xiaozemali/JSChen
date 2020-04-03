@@ -1,6 +1,7 @@
-# 一、防抖
+# 高阶段函数 函数式编程
+## 一、防抖
 
-## 应用场景：
+### 应用场景：
 
 - 支付
 
@@ -29,9 +30,9 @@ function debounce(fn, s, immediate) {
 }
 ```
 
-# 二、节流
+## 二、节流
 
-## 应用场景：
+### 应用场景：
 
 - 秒杀
 - 攻击
@@ -60,9 +61,9 @@ function throttle(fn, s) {
 }
 ```
 
-# 三、去重unqique
+## 三、去重unqique
 
-## 应用场景： 
+### 应用场景： 
 
 - 本地历史记录
 
@@ -76,7 +77,7 @@ function throttle(fn, s) {
 | 优化后的键值对方法 | [1, "1", null, undefined, String, /a/, NaN]                      | 全部去重                          |
 | Set                | [1, "1", null, undefined, String, String, /a/, /a/, NaN]         | object不去重              |
 
-## 1. for循环
+### 1. for循环
 
 ```js
 var array = [1,'1',new String('1'),NaN,{a:1},{a:2},null,undefined,2,{a:1},undefined,new String('1'),NaN,,null,1,'1']
@@ -97,7 +98,7 @@ function unqique(arr){
 }
 ```
 
-## 2. indexOf
+### 2. indexOf
 
 ```js
 var array = [1,'1',new String('1'),NaN,{a:1},{a:2},null,undefined,2,{a:1},undefined,new String('1'),NaN,,null,1,'1']
@@ -113,7 +114,7 @@ function unqique(arr){
 }
 ```
 
-## 3. sort
+### 3. sort
 
 > sort不合适，有些类型在不同位置出现无法排序
 ```js
@@ -131,7 +132,7 @@ function unqique(arr){
 }
 ```
 
-## 4. filter + indexOf
+### 4. filter + indexOf
 
 ```js
 
@@ -146,9 +147,9 @@ function unqique(arr){
 }
 ```
 
-## 5. filter + sort
+### 5. filter + sort
 
-## 6. object 键值对
+### 6. object 键值对
 
 ```js
 var array = [1,'1',new String('1'),NaN,{a:1},{a:2},null,undefined,2,{a:1},undefined,new String('1'),NaN,,null,1,'1']
@@ -161,7 +162,7 @@ function unqique(arr){
 }
 ```
 
-## 7. set
+### 7. set
 
 ```js
 var array = [1,'1',new String('1'),NaN,{a:1},{a:2},null,undefined,2,{a:1},undefined,new String('1'),NaN,,null,1,'1']
@@ -171,9 +172,9 @@ function unqique(arr){
 }
 ```
 
-# 四、类型
+## 四、类型
 
-## 应用场景： 
+### 应用场景： 
 
 - 单选、多选 -- 判断传入数据的类型，Array多选，Object、Number、String。。。单选
 - 函数接收参数需要检验数据类型
@@ -198,7 +199,7 @@ function unqique(arr){
 ||JSON||
 ||...||
 
-### 四种判断类型的方法:
+####  四种判断类型的方法:
 
 1. typeof
 2. constructor
@@ -247,11 +248,11 @@ console.log(auto instanceof Object);
 Object.prototype.toString.call()
 ```
 
-# 五、 深拷贝--shallowCopy、deepCopy
+## 五、 深拷贝--shallowCopy、deepCopy
 
 > 注： symbol类型的key就无法拷贝
 
-## 应用场景： 
+### 应用场景： 
 
 - 很多实际场景，避免原始数据受到更改
 
@@ -272,9 +273,9 @@ function shallowCopy(obj){
 }
 ```
 
-# 六、 数组扁平--flatten
+## 六、 数组扁平--flatten
 
-## 应用场景： 
+### 应用场景： 
 
 -  需要把多重数组摊平在进行处理
 
@@ -303,7 +304,7 @@ var flatten =  Function.apply.bind([].concat, [])
 ```
 
 
-# 七、 插入sortedIndex
+## 七、 插入sortedIndex
 
 ```js
 var array = [
@@ -349,7 +350,7 @@ sortedIndex(array,{name:'ccc4',id:4},(item)=>{
 })
 ```
 
-# 八、indexOf lastIndexOf fromIndex
+## 八、indexOf lastIndexOf fromIndex
 
 
 ```js
@@ -403,9 +404,9 @@ var lastIndexOf = initIndexOf(-1)
 fromIndex(array,3)
 ```
 
-# 九、相等 ===
+## 九、相等 ===
 
-## 1. -0 与 +0
+### 1. -0 与 +0
 
 目标： `-0 === +0`
 
@@ -454,7 +455,7 @@ console.log(eq(0, 0)) // true
 console.log(eq(0, -0)) // false
 ```
 
-## 2. NaN
+### 2. NaN
 
 目标： `NaN === NaN`
 
@@ -462,11 +463,11 @@ console.log(eq(0, -0)) // false
 
 
 
-# 十、柯里化
+## 十、柯里化
 
 哇，这个就老有意思了喂
 
-## 1.举个例子：
+### 1.举个例子：
 
 ```js
 function add(a, b) {
@@ -481,7 +482,7 @@ var addCurry = curry(add);
 addCurry(1)(2) // 3
 ```
 
-## 2. 用途
+### 2. 用途
 
 参数复用。本质上是降低通用性，提高适用性。
 
@@ -489,7 +490,7 @@ addCurry(1)(2) // 3
 
 > `[function_a].length === function_a_arguments.length`函数`a`的长度，等于函数`a`形式参数的长度，并不一定是函数`a`内部`arguments.length `
 
-### 第一版
+####  第一版
 
 ```js
 function sub_curry (fn) {
@@ -513,15 +514,15 @@ function curry(fn,length){
 }
 ```
 
-# 十一、惰性函数
+## 十一、惰性函数
 
 
 
-## 应用场景： 
+### 应用场景： 
 
 - 我们现在需要写一个 foo 函数，这个函数返回首次调用时的 Date 对象，注意是首次。
 
-## 1. 一般处理
+### 1. 一般处理
 
 ```js
 var t
@@ -533,7 +534,7 @@ function foo(){
 }
 ```
 
-## 2. 闭包
+### 2. 闭包
 
 ```js
 var foo = (function(){
@@ -544,7 +545,7 @@ var foo = (function(){
 })()
 ```
 
-## 3. 函数对象
+### 3. 函数对象
 
 ```js
 function foo(){
@@ -555,7 +556,7 @@ function foo(){
 }
 ```
 
-## 4. 惰性函数
+### 4. 惰性函数
 ```js
 function foo(){
   var t = new Date()
@@ -566,10 +567,10 @@ function foo(){
 }
 ```
 
-# 十二、函数组合
+## 十二、函数组合
 
 
-## 应用场景： 
+### 应用场景： 
 
 - 很常用，真的，实际开发，多个函数，处理上一个函数的执行结果
 
@@ -607,7 +608,7 @@ function compose (){
 }
 ```
 
-## es6
+### es6
 
 ```js
 const compose = (...fns) =>  
@@ -619,16 +620,18 @@ const compose = (...fns) =>
 ```
 
 
-# 特别补充
+## 特别补充
 
-## 1. void 0
+### 1. void 0
 
 由于js中， `undefined` ，并不是保留字段，所以一般情况下，判断是否是 `undefined` 使用 `void 0`
+
 ```js
 void 0 === undefined
 ```
 
 **总结**
 
-1. 通过采用void 0取undefined比采用字面上的undefined更靠谱更安全，应该优先采用void 0这种方式。
-2. 填充<a>的href确保点击时不会产生页面跳转; 填充<image>的src，确保不会向服务器发出垃圾请求。
+1. 通过采用 `void 0` 取 `undefined` 比采用字面上的 `undefined` 更靠谱更安全，应该优先采用 `void 0` 这种方式。
+
+2. 填充 `<a>` 的 `href` 确保点击时不会产生页面跳转; 填充 `<image>` 的 `src`，确保不会向服务器发出垃圾请求。
