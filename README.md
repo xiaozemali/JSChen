@@ -47,6 +47,7 @@ console.log("%c ", "background: url(https://blog.jschen.cc/assets/img/LOGO.png) 
 
 <h3>友情链接</h3>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
