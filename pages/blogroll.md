@@ -56,7 +56,7 @@
         <span class="item-head__name">Subin Vane</span>
       </div>
       <div class="item__des">
-        My brother bingo, work at Android with Java.
+        My brother Subin Vane, work at Android with Java.
       </div>
     </a>
   </ul>
