@@ -59,6 +59,15 @@
         My brother Subin Vane, work at Android with Java.
       </div>
     </a>
+    <a class="item" href="http://blog.jschen.cc/">
+      <div class="item-head">
+        <img class="item-head__logo" src="/assets/img/logo.png"></img>
+        <span class="item-head__name">JSChen</span>
+      </div>
+      <div class="item__des">
+        Is me,Sunny and handsome boy
+      </div>
+    </a>
   </ul>
 </body>
 </html>
