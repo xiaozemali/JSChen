@@ -16,7 +16,7 @@ module.exports = {
     lastUpdated: '更新时间', // string | boolean
     logo: '/assets/img/LOGO.png',
     // sidebar: 'auto',
-    displayAllHeaders:true,
+    displayAllHeaders:false,
     sidebar:{
       // 前端架构 javaScript基础
       '/pages/technology/architect/base/': [
@@ -27,8 +27,10 @@ module.exports = {
           children:[
             '',
             'this',
-            'fp',
-            'test'
+            'execution_scope',
+            'new',
+            'apply_call_bind',
+            'test',
           ]
         },  /* /foo/one.html */
         {
@@ -36,7 +38,6 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children:[
-            '',
             'fp'
           ]
         }, 
@@ -399,7 +400,7 @@ module.exports = {
       { text: '名言小课堂', link: '/pages/saying/'},
       { text: '关于', link: '/pages/about/' },
       { text: '友情链接', link: '/pages/blogroll/' },
-      { text: 'GitHub', link: 'https://github.com/guestccc' },
+      { text: 'GitHub', link: 'https://github.com/guestccc/blog' },
     ],
   },
   plugins: {

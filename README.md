@@ -44,10 +44,6 @@
 
 2. [面试准备](https://blog.jschen.cc/pages/interview/plan/)
 
-<script>
-// 打印叶子
-console.log("%c ", "background: url(https://blog.jschen.cc/assets/img/LOGO.png) no-repeat center;padding-left:300px;padding-bottom: 242px")
-</script>
 
 <h3>友情链接</h3>
 

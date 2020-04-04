@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>new 实现 | JSChen</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/assets/img/LOGO.png">
+  <script type="text/javascript" src="/assets/sitemap/baidu.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/css/app.css">
+  <meta name="keywords" content="ccc,jschen,陈程城,vue,前端,web前端,前端基础,bind,apply,call,prototype,tcp/ip,TCP/IP,webpack,nuxt,event-loop,作用域链,执行上下文,js,jschen,javaScript,new,class,es6,new 实质,node,babel,ci/cd,CI/CD,vue源码,前端进阶,">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.dcd73214.css" as="style"><link rel="preload" href="/assets/js/app.87deb3ab.js" as="script"><link rel="preload" href="/assets/js/2.b22ff6c4.js" as="script"><link rel="preload" href="/assets/js/19.0d663b0e.js" as="script"><link rel="prefetch" href="/assets/js/10.3c33cedc.js"><link rel="prefetch" href="/assets/js/11.a08a96bd.js"><link rel="prefetch" href="/assets/js/12.385d4662.js"><link rel="prefetch" href="/assets/js/13.90568a99.js"><link rel="prefetch" href="/assets/js/14.8b5dee69.js"><link rel="prefetch" href="/assets/js/15.a5a7b483.js"><link rel="prefetch" href="/assets/js/16.8ae5e979.js"><link rel="prefetch" href="/assets/js/17.9a85a0fb.js"><link rel="prefetch" href="/assets/js/18.e00530cd.js"><link rel="prefetch" href="/assets/js/20.449178b8.js"><link rel="prefetch" href="/assets/js/21.6aa4a311.js"><link rel="prefetch" href="/assets/js/22.bd4c2bd0.js"><link rel="prefetch" href="/assets/js/23.f5a2c761.js"><link rel="prefetch" href="/assets/js/24.5524fb10.js"><link rel="prefetch" href="/assets/js/25.fa8774fe.js"><link rel="prefetch" href="/assets/js/26.1aa6bb16.js"><link rel="prefetch" href="/assets/js/27.8df0094d.js"><link rel="prefetch" href="/assets/js/28.6a9eb47f.js"><link rel="prefetch" href="/assets/js/29.5cb4e8ae.js"><link rel="prefetch" href="/assets/js/3.bfb23c19.js"><link rel="prefetch" href="/assets/js/30.8e52f3c3.js"><link rel="prefetch" href="/assets/js/31.2fd325f9.js"><link rel="prefetch" href="/assets/js/4.62a32dcd.js"><link rel="prefetch" href="/assets/js/5.c00ef2b8.js"><link rel="prefetch" href="/assets/js/6.67a53f8a.js"><link rel="prefetch" href="/assets/js/7.1d472987.js"><link rel="prefetch" href="/assets/js/8.423f29e8.js"><link rel="prefetch" href="/assets/js/9.c6822515.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.dcd73214.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/LOGO.png" alt="JSChen" class="logo"> <span class="site-name can-hide">JSChen</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术提升" class="dropdown-title"><span class="title">技术提升</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端架构师之路
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/technology/architect/base/" class="nav-link router-link-active">
+  javaScript基础
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/vue/" class="nav-link">
+  Vue.js
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/engineering/" class="nav-link">
+  前端工程化
+</a></li></ul></li><li class="dropdown-item"><h4>
+          运维小兴趣
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/technology/ops/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/ops/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/ops/docker/" class="nav-link">
+  docker
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试" class="dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/interview/included/" class="nav-link">
+  面试题收录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/interview/plan/" class="nav-link">
+  面试准备
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/essay/" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="/pages/saying/" class="nav-link">
+  名言小课堂
+</a></div><div class="nav-item"><a href="/pages/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/pages/blogroll/" class="nav-link">
+  友情链接
+</a></div><div class="nav-item"><a href="https://github.com/guestccc/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术提升" class="dropdown-title"><span class="title">技术提升</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端架构师之路
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/technology/architect/base/" class="nav-link router-link-active">
+  javaScript基础
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/vue/" class="nav-link">
+  Vue.js
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/architect/engineering/" class="nav-link">
+  前端工程化
+</a></li></ul></li><li class="dropdown-item"><h4>
+          运维小兴趣
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/technology/ops/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/ops/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-subitem"><a href="/pages/technology/ops/docker/" class="nav-link">
+  docker
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试" class="dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/interview/included/" class="nav-link">
+  面试题收录
+</a></li><li class="dropdown-item"><!----> <a href="/pages/interview/plan/" class="nav-link">
+  面试准备
+</a></li></ul></div></div><div class="nav-item"><a href="/pages/essay/" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="/pages/saying/" class="nav-link">
+  名言小课堂
+</a></div><div class="nav-item"><a href="/pages/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="/pages/blogroll/" class="nav-link">
+  友情链接
+</a></div><div class="nav-item"><a href="https://github.com/guestccc/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>基础知识</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/technology/architect/base/" class="sidebar-link">原型链</a></li><li><a href="/pages/technology/architect/base/this.html" class="sidebar-link">this</a></li><li><a href="/pages/technology/architect/base/execution_scope.html" class="sidebar-link">执行上下文栈到作用域链</a></li><li><a href="/pages/technology/architect/base/new.html" class="active sidebar-link">new 实现</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/technology/architect/base/new.html#分4步走：" class="sidebar-link">分4步走：</a></li></ul></li><li><a href="/pages/technology/architect/base/apply_call_bind.html" class="sidebar-link">apply call bind 模拟实现</a></li><li><a href="/pages/technology/architect/base/test.html" class="sidebar-link">标题二</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>函数式编程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>es6</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="new-实现"><a href="#new-实现" class="header-anchor">#</a> new 实现</h1> <p>首先来看下 new 关键字执行了哪些步骤</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">JSChen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'ccc'</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">JSChen</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">18</span>
+<span class="token keyword">var</span> objC <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JSChen</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>objC<span class="token punctuation">)</span>
+<span class="token comment">// JSChen {name: &quot;ccc&quot;}</span>
+<span class="token comment">//   name: &quot;ccc&quot;</span>
+<span class="token comment">//   __proto__:</span>
+<span class="token comment">//     age: 18</span>
+<span class="token comment">//     constructor: ƒ JSChen()</span>
+<span class="token comment">//     __proto__: Object</span>
+</code></pre></div><h2 id="分4步走："><a href="#分4步走：" class="header-anchor">#</a> 分4步走：</h2> <ol><li><p>创建一个对象，这里我们暂时叫做<code>obj</code></p></li> <li><p>把 <code>obj</code> 的 <code>__proto__</code> 属性指向 <code>JSChen.prototype</code> 指向的内存地址，也就是 <code>obj.__proto__ = JSChen.prototype</code></p></li> <li><p>把构造函数的 <code>this</code> 指向对象 <code>obj</code></p></li> <li><p>如果构造函数有返回值并且是引用类型的值，那么返回该引用类型的值，否则返回对象 <code>obj</code></p></li></ol> <h3 id="_1-要优雅"><a href="#_1-要优雅" class="header-anchor">#</a> 1. 要优雅</h3> <p>首先我们要优雅，咱们直接让每个函数都可以直接调用我们写的 <code>fakeNew</code> 伪造的 <code>new</code> 方法</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 构造函数 JSChen</span>
+<span class="token keyword">function</span> <span class="token function">JSChen</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 伪造的 new 方法</span>
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">fakeNew</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用 伪造的 new 方法</span>
+
+<span class="token keyword">var</span> objC <span class="token operator">=</span> JSChen<span class="token punctuation">.</span><span class="token function">fakeNew</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_2-创建一个对象，这里我们暂时叫做obj"><a href="#_2-创建一个对象，这里我们暂时叫做obj" class="header-anchor">#</a> 2. 创建一个对象，这里我们暂时叫做<code>obj</code></h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 构造函数 JSChen</span>
+<span class="token keyword">function</span> <span class="token function">JSChen</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 伪造的 new 方法</span>
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">fakeNew</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用 伪造的 new 方法</span>
+
+<span class="token keyword">var</span> objC <span class="token operator">=</span> JSChen<span class="token punctuation">.</span><span class="token function">fakeNew</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_3-把-obj-的-proto-属性指向-jschen-prototype-指向的内存地址，也就是-obj-proto-jschen-prototype"><a href="#_3-把-obj-的-proto-属性指向-jschen-prototype-指向的内存地址，也就是-obj-proto-jschen-prototype" class="header-anchor">#</a> 3. 把 <code>obj</code> 的 <code>__proto__</code> 属性指向 <code>JSChen.prototype</code> 指向的内存地址，也就是 <code>obj.__proto__ = JSChen.prototype</code></h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 构造函数 JSChen</span>
+<span class="token keyword">function</span> <span class="token function">JSChen</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 伪造的 new 方法</span>
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">fakeNew</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  obj<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>prototype <span class="token comment">// 这里的 this 指向的是 JSChen</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用 伪造的 new 方法</span>
+
+<span class="token keyword">var</span> objC <span class="token operator">=</span> JSChen<span class="token punctuation">.</span><span class="token function">fakeNew</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_4-把构造函数的-this-指向对象-obj"><a href="#_4-把构造函数的-this-指向对象-obj" class="header-anchor">#</a> 4. 把构造函数的 <code>this</code> 指向对象 <code>obj</code></h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 构造函数 JSChen</span>
+<span class="token keyword">function</span> <span class="token function">JSChen</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 伪造的 new 方法</span>
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">fakeNew</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>val</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  obj<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>prototype <span class="token comment">// 这里的 this 指向的是 JSChen</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span>val<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用 伪造的 new 方法</span>
+
+<span class="token keyword">var</span> objC <span class="token operator">=</span> JSChen<span class="token punctuation">.</span><span class="token function">fakeNew</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_5-如果构造函数有返回值并且是引用类型的值，那么返回该引用类型的值，否则返回对象-obj"><a href="#_5-如果构造函数有返回值并且是引用类型的值，那么返回该引用类型的值，否则返回对象-obj" class="header-anchor">#</a> 5. 如果构造函数有返回值并且是引用类型的值，那么返回该引用类型的值，否则返回对象 <code>obj</code></h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 构造函数 JSChen</span>
+<span class="token keyword">function</span> <span class="token function">JSChen</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 伪造的 new 方法</span>
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">fakeNew</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>val</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  obj<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>prototype <span class="token comment">// 这里的 this 指向的是 JSChen</span>
+  <span class="token keyword">var</span> result <span class="token operator">=</span>  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span>val<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> result <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token operator">?</span>result<span class="token operator">:</span>obj
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 使用 伪造的 new 方法</span>
+
+<span class="token keyword">var</span> objC <span class="token operator">=</span> JSChen<span class="token punctuation">.</span><span class="token function">fakeNew</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/pages/technology/architect/base/execution_scope.html" class="prev">
+        执行上下文栈到作用域链
+      </a></span> <span class="next"><a href="/pages/technology/architect/base/apply_call_bind.html">
+        apply call bind 模拟实现
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.87deb3ab.js" defer></script><script src="/assets/js/2.b22ff6c4.js" defer></script><script src="/assets/js/19.0d663b0e.js" defer></script>
+  </body>
+</html>
