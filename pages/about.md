@@ -1,4 +1,9 @@
 ---
+title: 去靠近一个给你正能量的人
+date: 2013-04-22  
+categories: 
+ - other
+author: 国馆
 sidebar: auto
 ---
 

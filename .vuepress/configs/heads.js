@@ -3,5 +3,6 @@ module.exports = [
   ['link', { rel: 'icon', href: '/assets/img/LOGO.png' }],
   // 百度收录
   ['script', { type: 'text/javascript', src: '/assets/sitemap/baidu.js' }],
-  ['meta', { name: 'keywords', content: 'ccc,jschen,陈程城,vue,前端,web前端,前端基础,bind,apply,call,prototype,tcp/ip,TCP/IP,webpack,nuxt,event-loop,作用域链,执行上下文,js,jschen,javaScript,new,class,es6,new 实质,node,babel,ci/cd,CI/CD,vue源码,前端进阶,' }]
+  ['meta', { name: 'keywords', content: 'ccc,jschen,陈程城,vue,前端,web前端,前端基础,bind,apply,call,prototype,tcp/ip,TCP/IP,webpack,nuxt,event-loop,作用域链,执行上下文,js,jschen,javaScript,new,class,es6,new 实质,node,babel,ci/cd,CI/CD,vue源码,前端进阶,' }],
+  ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
 ];

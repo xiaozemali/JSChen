@@ -400,6 +400,7 @@ module.exports = {
         link: '/pages/essay/' 
       },
       { text: '关于', link: '/pages/about/' },
+      { text: '友情链接', link: '/pages/blogroll/' },
       { text: 'GitHub', link: 'https://github.com/guestccc' },
     ],
   },
