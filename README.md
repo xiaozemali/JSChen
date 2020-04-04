@@ -69,10 +69,6 @@ console.log("%c ", "background: url(https://blog.jschen.cc/assets/img/LOGO.png) 
         </a>
       </td>
     </tr>
-    <tr></tr>
-    <tr>
-    </tr>
-    <tr></tr>
   </tbody>
 </table>
 
