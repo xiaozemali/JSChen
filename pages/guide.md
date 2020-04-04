@@ -12,9 +12,31 @@ sidebar: auto
 
 因缘巧合吧，百度、谷歌了一段时间，关于学习，关于前端之路，该是怎样，该如何规划...
 
-::: tip
+::: tip 小提示
 下面是一个我自己查阅了一些其他开发者的个人计划以及一些大厂推荐学习计划，整理的一份适合自己的近期的前端提升计划
 :::
 
+## 技术提升
+
+1. 前端架构师之路
+
+    1. [javaScript基础](/pages/technology/architect/base/)
+    2. [计算机网络](/pages/technology/architect/network/)
+    2. [Vue.js](/pages/technology/architect/vue/)
+    2. [React](/pages/technology/architect/react/)
+    2. [node](/pages/technology/architect/node/)
+    2. [前端工程化](/pages/technology/architect/engineering/)
+    
+2. 运维小兴趣
+
+    2. [linux](/pages/technology/architect/engineering/)
+    2. [nginx](/pages/technology/architect/engineering/)
+    2. [docker](/pages/technology/architect/engineering/)
+
+## 面试
+
+1. [面试题收录](/pages/interview/included/)
+
+2. [面试准备](/pages/interview/plan/)
 
 vuepress 的热重载 hot reload 有问题

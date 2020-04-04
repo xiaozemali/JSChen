@@ -395,10 +395,8 @@ module.exports = {
         ]
       },
       // 随笔 essay
-      { 
-        text: '随笔',
-        link: '/pages/essay/' 
-      },
+      { text: '随笔', link: '/pages/essay/'},
+      { text: '名言小课堂', link: '/pages/saying/'},
       { text: '关于', link: '/pages/about/' },
       { text: '友情链接', link: '/pages/blogroll/' },
       { text: 'GitHub', link: 'https://github.com/guestccc' },
