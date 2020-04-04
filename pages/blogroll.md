@@ -41,7 +41,7 @@
 </head>
 <body>
   <ul class="list">
-    <a class="item" href="https://bingozb.github.io/">
+    <a class="item" href="https://bingozb.github.io/" target="_blank">
       <div class="item-head">
         <img class="item-head__logo" src="/assets/img/bingo_logo.png"></img>
         <span class="item-head__name">Bingo</span>
@@ -50,7 +50,7 @@
         My brother Bingo, also our CTO.
       </div>
     </a>
-    <a class="item" href="http://blog.vane.ren/">
+    <a class="item" href="http://blog.vane.ren/" target="_blank">
       <div class="item-head">
         <img class="item-head__logo" src="/assets/img/vane_logo.jpg"></img>
         <span class="item-head__name">Subin Vane</span>
@@ -59,9 +59,9 @@
         My brother Subin Vane, work at Android with Java.
       </div>
     </a>
-    <a class="item" href="http://blog.jschen.cc/">
+    <a class="item" href="http://blog.jschen.cc/" target="_blank">
       <div class="item-head">
-        <img class="item-head__logo" src="/assets/img/logo.png"></img>
+        <img class="item-head__logo" src="/assets/img/LOGO.png"></img>
         <span class="item-head__name">JSChen</span>
       </div>
       <div class="item__des">
