@@ -44,10 +44,10 @@
     <a class="item" href="https://bingozb.github.io/">
       <div class="item-head">
         <img class="item-head__logo" src="/assets/img/bingo_logo.png"></img>
-        <span class="item-head__name">bingo</span>
+        <span class="item-head__name">Bingo</span>
       </div>
       <div class="item__des">
-        My brother bingo, also our CTO.
+        My brother Bingo, also our CTO.
       </div>
     </a>
     <a class="item" href="http://blog.vane.ren/">
