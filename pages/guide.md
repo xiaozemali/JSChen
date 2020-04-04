@@ -40,3 +40,17 @@ sidebar: auto
 2. [面试准备](/pages/interview/plan/)
 
 vuepress 的热重载 hot reload 有问题
+
+{
+  {
+    value: 'JSChen',
+    configurable: true,
+    enumerable: true,
+    writable: true,
+  }
+}
+
+{
+  name:'',
+  JSChen:function() {}
+}

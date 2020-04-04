@@ -5,22 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style type="text/css">
+    @media screen and (max-width: 720px) {
+        .list {
+          flex-direction: column;
+          align-items: center;
+        }
+    }
     .list{
       margin: 0 auto;
       padding: 0;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       width:100%;
     }
     .item{
-      margin: 0 24px 24px 0;
-      display: block;
-      padding: 12px;
-      width: 300px;
+      margin: 0 0 24px 0;
       border-radius: 12px;
+      padding: 12px;
+      display: block;
+      flex-basis: 28%;
+      max-width:28%;
+      min-width:180px;
+      color:#000;
       background-color: #fad44922;
       cursor: pointer;
-      color:#000;
     }
     .item-head{
       display: flex;
