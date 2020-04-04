@@ -1,4 +1,11 @@
-<h1 align="center">JSChen的个人博客</h1>
+
+<p  align="center" >
+<img src="https://blog.jschen.cc/assets/img/LOGO.png">
+</p>
+
+<h2 align="center">JSChen的个人博客</h2>
+
+
 
 ## 简介
 
