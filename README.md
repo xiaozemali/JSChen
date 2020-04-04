@@ -2,7 +2,8 @@
 home: true
 heroImage: /assets/img/LOGO.png
 heroText: JSChen
-tagline: 个人技术提升的知识体系，终身学习的信仰(新博客转移中，旧博客是Hexo做的，准备废弃掉...)
+tagline: 新博客转移中，旧博客是Hexo做的，准备废弃掉，最近在面试所以转移的比较慢哈，有些文章以前写的比较稚嫩，慢慢改...
+# 个人技术提升的知识体系，终身学习的信仰
 actionText: 欢迎指点 →
 actionLink: /pages/guide/
 features:
@@ -12,8 +13,6 @@ features:
   details: 日常项目小坑，小白笔记
 - title: 面试
   details: 面试题解析
-- title: 面试
-  details: 面试题解析
 footer: Copyright © 2018-present jschen
 ---
 <script>
@@ -21,7 +20,8 @@ footer: Copyright © 2018-present jschen
 console.log("%c ", "background: url(https://blog.jschen.cc/assets/img/LOGO.png) no-repeat center;padding-left:300px;padding-bottom: 242px")
 </script>
 
-### 友情链接
+
+<h3>友情链接</h3>
 
 <html lang="en">
 <head>
@@ -52,7 +52,7 @@ console.log("%c ", "background: url(https://blog.jschen.cc/assets/img/LOGO.png) 
       max-width:28%;
       min-width:180px;
       color:#000;
-      background-color: #fad44922;
+      background-color: #fad44916;
       cursor: pointer;
     }
     .item-head{
@@ -83,7 +83,7 @@ console.log("%c ", "background: url(https://blog.jschen.cc/assets/img/LOGO.png) 
         My brother Bingo, also our CTO.
       </div>
     </a>
-    <a class="item" href="http://blog.vane.ren/" target="_blank">
+    <a class="item" href="http://blog.vane.ren/" target="_blank" >
       <div class="item-head">
         <img class="item-head__logo" src="/assets/img/vane_logo.jpg"></img>
         <span class="item-head__name">Subin Vane</span>

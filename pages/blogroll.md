@@ -28,7 +28,7 @@
       max-width:28%;
       min-width:180px;
       color:#000;
-      background-color: #fad44922;
+      background-color: #fad44916;
       cursor: pointer;
     }
     .item-head{
@@ -59,7 +59,7 @@
         My brother Bingo, also our CTO.
       </div>
     </a>
-    <a class="item" href="http://blog.vane.ren/" target="_blank">
+    <a class="item" href="http://blog.vane.ren/" target="_blank" >
       <div class="item-head">
         <img class="item-head__logo" src="/assets/img/vane_logo.jpg"></img>
         <span class="item-head__name">Subin Vane</span>
