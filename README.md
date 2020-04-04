@@ -44,93 +44,36 @@ console.log("%c ", "background: url(https://blog.jschen.cc/assets/img/LOGO.png) 
 
 <h3>友情链接</h3>
 
-<body>
-  <ul class="list" style="
-      margin: 0 auto;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      width:100%;">
-    <a class="item" href="https://bingozb.github.io/" target="_blank" style="
-      margin: 0 0 24px 0;
-      border-radius: 12px;
-      padding: 12px;
-      display: block;
-      flex-basis: 28%;
-      max-width:28%;
-      min-width:200px;
-      color:#000;
-      background-color: #fad44916;
-      cursor: pointer;">
-      <div class="item-head" style="
-      display: flex;">
-        <img class="item-head__logo" src="http://blog.jschen.cc/assets/img/bingo_logo.png" style="
-      width: 30px;
-      height: 30px;"></img>
-        <span class="item-head__name" style="
-      margin-left: 12px;
-      line-height: 30px;
-      font-size: 28px;">Bingo</span>
-      </div>
-      <div class="item__des" style="
-      margin-top: 12px;">
-        My brother Bingo, also our CTO.
-      </div>
-    </a>
-    <a class="item" href="http://blog.vane.ren/" target="_blank" style="
-      margin: 0 0 24px 0;
-      border-radius: 12px;
-      padding: 12px;
-      display: block;
-      flex-basis: 28%;
-      max-width:28%;
-      min-width:200px;
-      color:#000;
-      background-color: #fad44916;
-      cursor: pointer;">
-      <div class="item-head" style="
-      display: flex;">
-        <img class="item-head__logo" src="/assets/img/vane_logo.jpg" style="
-      width: 30px;
-      height: 30px;"></img>
-        <span class="item-head__name" style="
-      margin-left: 12px;
-      line-height: 30px;
-      font-size: 28px;">Subin Vane</span>
-      </div>
-      <div class="item__des" style="
-      margin-top: 12px;">
-        My brother Subin Vane, work at Android with Java.
-      </div>
-    </a>
-    <a class="item" href="http://blog.jschen.cc/" target="_blank" style="
-      margin: 0 0 24px 0;
-      border-radius: 12px;
-      padding: 12px;
-      display: block;
-      flex-basis: 28%;
-      max-width:28%;
-      min-width:200px;
-      color:#000;
-      background-color: #fad44916;
-      cursor: pointer;">
-      <div class="item-head" style="
-      display: flex;">
-        <img class="item-head__logo" src="http://blog.jschen.cc/assets/img/LOGO.png" style="
-      width: 30px;
-      height: 30px;"></img>
-        <span class="item-head__name" style="
-      margin-left: 12px;
-      line-height: 30px;
-      font-size: 28px;">JSChen</span>
-      </div>
-      <div class="item__des" style="
-      margin-top: 12px;">
-        Is me,Sunny and handsome boy
-      </div>
-    </a>
-  </ul>
-</body>
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://bingozb.github.io/" target="_blank">
+          <img height="100px" src="https://blog.jschen.cc/assets/img/bingo_logo.png">
+          <p>bingo</p>
+          <p align="left"> My brother Bingo, also our CTO.</p>
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://blog.vane.ren/" target="_blank">
+          <img height="100px" src="https://blog.jschen.cc/assets/img/vane_logo.jpg">
+          <p>Subin Vane</p>
+          <p> My brother Subin Vane, work at Android with Java.</p>
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://bingozb.github.io/" target="_blank">
+          <img height="100px" src="https://blog.jschen.cc/assets/img/LOGO.png">
+          <p>JSChen</p>
+          <p>  Is me,Sunny and handsome boy</p>
+        </a>
+      </td>
+    </tr>
+    <tr></tr>
+    <tr>
+    </tr>
+    <tr></tr>
+  </tbody>
+</table>
 
 [查看更多](https://blog.jschen.cc/pages/blogroll/)
