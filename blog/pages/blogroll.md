@@ -1,3 +1,5 @@
+# 友情链接
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

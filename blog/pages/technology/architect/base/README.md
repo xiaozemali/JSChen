@@ -1,3 +1,10 @@
+---
+tags: 
+  - 原型链
+  - 主题
+  - 索引
+---
+
 # 原型链
 
 首先来看下 [MDN 对象原型](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes) 这句

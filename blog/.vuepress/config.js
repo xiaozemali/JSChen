@@ -13,6 +13,8 @@ module.exports = {
     }
   },
   themeConfig: {
+    search: true,
+    searchMaxSuggestions: 10,
     lastUpdated: '更新时间', // string | boolean
     logo: '/assets/img/LOGO.png',
     // sidebar: 'auto',
@@ -30,6 +32,11 @@ module.exports = {
             'execution_scope',
             'new',
             'apply_call_bind',
+            'type',
+            'event-loop',
+            'code',
+            'css',
+            'html',
             'test',
           ]
         },  /* /foo/one.html */
@@ -55,8 +62,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children:[
-            '',
-            'fp'
+            'design',
           ]
         }, 
       ],
@@ -67,7 +73,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children:[
-            '',
+            'status',
           ]
         },  /* /foo/one.html */
         {
@@ -344,11 +350,14 @@ module.exports = {
       // 随笔
       '/pages/essay/': [
         {
-          title: 'jenkins',
+          title: '随笔',
           collapsable: true,
           sidebarDepth: 2,
           children:[
             'jenkins',
+            'incongruent_operator',
+            'bad_time',
+            'area_code',
           ]
         }, 
       ],

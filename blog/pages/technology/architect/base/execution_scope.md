@@ -1,4 +1,4 @@
-# 执行上下文栈到作用域链
+# 从 执行上下文栈 到 作用域链 到 闭包
 
 * 作用域
 
@@ -507,3 +507,9 @@ oldChen.[[scope]] = <JSChen execution context>.scope
 <execution context stock>:[
 ]
 ```
+
+## 相关链接
+
+[《一道js面试题引发的思考 #18》](https://github.com/kuitos/kuitos.github.io/issues/18)
+
+[《JavaScript深入之执行上下文 #8》](https://github.com/mqyqingfeng/Blog/issues/8)

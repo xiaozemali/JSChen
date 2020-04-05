@@ -130,3 +130,5 @@ jschen()
 
 阮一峰——[《JavaScript 的 this 原理》](http://www.ruanyifeng.com/blog/2018/06/javascript-this.html)
 
+这里推荐再看一下这篇 [JavaScript深入之从ECMAScript规范解读this #7](https://github.com/mqyqingfeng/Blog/issues/7) 品的很深
+
