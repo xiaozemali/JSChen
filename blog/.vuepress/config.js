@@ -82,7 +82,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
         {
@@ -99,7 +98,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
       ],
@@ -119,7 +117,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
         {
@@ -136,7 +133,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
       ],
@@ -156,7 +152,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
         {
@@ -173,7 +168,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
       ],
@@ -193,7 +187,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
       ],
@@ -213,7 +206,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
         {
@@ -222,7 +214,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
         {
@@ -231,7 +222,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
         {
@@ -240,7 +230,6 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
-            'fp'
           ]
         }, 
       ],
@@ -354,6 +343,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children:[
+            'about_talk',
             'jenkins',
             'incongruent_operator',
             'bad_time',

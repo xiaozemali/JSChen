@@ -1,6 +1,6 @@
 
 <p  align="center" >
-<img src="https://blog.jschen.cc/assets/img/LOGO.png">
+  <img src="https://blog.jschen.cc/assets/img/LOGO.png">
 </p>
 
 <h2 align="center">JSChen的个人博客</h2>
@@ -54,21 +54,24 @@
         <a href="https://bingozb.github.io/" target="_blank">
           <img height="100px" src="https://blog.jschen.cc/assets/img/bingo_logo.png">
           <p>bingo</p>
-          <p align="left"> My brother Bingo, also our CTO.</p>
+          <!-- <p align="left"> My brother Bingo, also our CTO.</p> -->
+          <p align="center">💻🚀</p>
         </a>
       </td>
       <td align="center" valign="middle">
         <a href="https://blog.vane.ren/" target="_blank">
           <img height="100px" src="https://blog.jschen.cc/assets/img/vane_logo.jpg">
           <p>Subin Vane</p>
-          <p> My brother Subin Vane, work at Android with Java.</p>
+          <!-- <p> My brother Subin Vane, work at Android with Java.</p> -->
+          <p align="center">💻🤖</p>
         </a>
       </td>
       <td align="center" valign="middle">
         <a href="https://bingozb.github.io/" target="_blank">
           <img height="100px" src="https://blog.jschen.cc/assets/img/LOGO.png">
           <p>JSChen</p>
-          <p>  Is me,Sunny and handsome boy</p>
+          <!-- <p>  Is me,Sunny and handsome boy</p> -->
+          <p align="center">💻🎨</p>
         </a>
       </td>
     </tr>

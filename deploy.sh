@@ -2,6 +2,9 @@
 # yarn
 # yarn build
 
+# 确保脚本抛出遇到的错误
+set -e
+
 echo "blog.jschen.cc" > blog/.vuepress/dist/CNAME
 
 rm -rf deploy
