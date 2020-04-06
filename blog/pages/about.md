@@ -1,8 +1,7 @@
 ---
-sidebar: auto
+sidebar: 'auto'
 ---
-
-<!-- <h1 style="display:inline-block">陈程城</h1>/chengcheng chen -->
+# 简历
 
 # 陈程城
 

@@ -332,7 +332,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children:[
-            '',
+            'js-base',
           ]
         },
       ],
@@ -344,6 +344,7 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             'about_talk',
+            'expression_statement',
             'jenkins',
             'incongruent_operator',
             'bad_time',
