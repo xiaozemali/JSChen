@@ -53,7 +53,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children:[
-            '',
+            'es6',
             'fp'
           ]
         }, 
