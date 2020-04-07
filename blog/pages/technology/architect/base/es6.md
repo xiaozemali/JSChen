@@ -104,3 +104,8 @@ class IncreasingCounter {
   }
 }
 ```
+### new.target
+
+拿到 new 调用类
+
+如果是子类继承父类，父类用了 new.target 那么 new.target 返回的是子类
