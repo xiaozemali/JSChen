@@ -59,3 +59,48 @@ Reflect.deleteProperty(obj,'b')
 - construct(target, args)：拦截 Proxy 实例作为构造函数调用的操作，比如new proxy(...args)。
 
 ## set
+
+## class
+
+```js
+class JSChen{
+  name = 'jschen'
+  constructor (name) {
+    this.name = name
+    this.getName = this.getName.bind(this)
+  }
+  getName(){
+    return this.name
+  }
+  static sayHi(){
+    console.log('我是静态方法，我定义在类对象上')
+  }
+}
+```
+
+### 私有属性
+
+私有方法和私有属性，是只能在类的内部访问的方法和属性，外部不能访问。这是常见需求，有利于代码的封装，但 ES6 不提供，只能通过变通方法模拟实现。
+
+### 私有属性的提案 
+
+[tc39 -- github](https://github.com/tc39/proposal-private-methods)
+
+这个按是第 Stage 3
+
+也就是说如果用 babel-loader 的话 也是用的Stage 3
+
+为class加了私有属性。方法是在属性名之前，使用#表示。
+
+```js
+class IncreasingCounter {
+  #count = 0;
+  get value() {
+    console.log('Getting the current value!');
+    return this.#count;
+  }
+  increment() {
+    this.#count++;
+  }
+}
+```
