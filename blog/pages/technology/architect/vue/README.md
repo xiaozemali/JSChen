@@ -63,14 +63,16 @@ app.show = app.data.show
 app.methods.onUserClick.apply(app)
 ```
 
-## 检查变化
+### 检查变化
 
 这里要注意的是什么，这里引入官方文档一句话哈
 
-::: tip [Vue.js](https://cn.vuejs.org/v2/guide/reactivity.html)
-受现代 JavaScript 的限制 (而且 Object.observe 也已经被废弃)，Vue 无法检测到对象属性的添加或删除。
+::: warning 废弃
+[Vue.js](https://cn.vuejs.org/v2/guide/reactivity.html)
+
+受现代 `JavaScript` 的限制 (而且 Object.observe 也已经被废弃)，Vue 无法检测到对象属性的添加或删除。
 :::
 
 讲的是什么呢
 
-如果没有事先（开发中）在 data 中定义需要做响应式的数据，那么，页面初始化后再去给 data 添加新的属性，这些新添加到 data 上的属性是无法监听到的，因为 js 的这个方法 Object.observe 已经废弃了，当然 vue 是有提供一个特有的 api 去实现这个功能
+如果没有事先（开发中）在 `data` 中定义需要做响应式的数据，那么，页面初始化后再去给 `data` 添加新的属性，这些新添加到 `data` 上的属性是无法监听到的，因为 `js` 的这个方法 `Object.observe` 已经废弃了，当然 `vue` 是有提供一个特有的 `api` 去实现这个功能

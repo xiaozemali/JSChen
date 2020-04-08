@@ -109,3 +109,60 @@ class IncreasingCounter {
 拿到 new 调用类
 
 如果是子类继承父类，父类用了 new.target 那么 new.target 返回的是子类
+
+### @decorator
+
+类的装饰器
+
+```js
+@testable
+class MyTestableClass {
+  // ...
+}
+
+function testable(target) {
+  target.isTestable = true;
+}
+
+MyTestableClass.isTestable // true
+```
+
+方法的装饰器
+
+```js
+class Person {
+  @readonly
+  name() { return `${this.first} ${this.last}` }
+}
+
+function readonly(target, name, descriptor){
+  // descriptor对象原来的值如下
+  // {
+  //   value: specifiedFunction,
+  //   enumerable: false,
+  //   configurable: true,
+  //   writable: true
+  // };
+  descriptor.writable = false;
+  return descriptor;
+}
+
+readonly(Person.prototype, 'name', descriptor);
+// 类似于
+Object.defineProperty(Person.prototype, 'name', descriptor);
+```
+## Promise
+
+Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。
+
+## Generator
+
+Generator 函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同。
+
+## async
+
+async 函数是什么？一句话，它就是 Generator 函数的语法糖。
+
+1. 内置执行器。
+2. 更好的语义。
+3. 返回值是 Promise。

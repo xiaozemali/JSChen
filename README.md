@@ -67,7 +67,7 @@
         </a>
       </td>
       <td align="center" valign="middle">
-        <a href="https://bingozb.github.io/" target="_blank">
+        <a href="https://blog.jschen.cc/" target="_blank">
           <img height="100px" src="https://blog.jschen.cc/assets/img/LOGO.png">
           <p>JSChen</p>
           <!-- <p>  Is me,Sunny and handsome boy</p> -->
