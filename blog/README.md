@@ -15,7 +15,8 @@ features:
   details: 面试题解析
 footer: Copyright © 2018-present jschen
 ---
-<script>
+</script>
+<script type="text/javascript">
 // 打印叶子
 console.log("%c ", "background: url(https://blog.jschen.cc/assets/img/LOGO.png) no-repeat center;padding-left:300px;padding-bottom: 242px")
 </script>

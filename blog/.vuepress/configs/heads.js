@@ -1,6 +1,6 @@
 // head 头部引入 js meta icon
 module.exports = [
-  ['link', { rel: 'icon', href: '/assets/img/LOGO.png' }],
+  ['link', { rel: 'icon', href: '/assets/img/LOGO.png',type:"image/png"}],
   // 百度收录
   ['script', { type: 'text/javascript', src: '/assets/sitemap/baidu.js' }],
   ['link', { rel:"stylesheet",type: 'text/css', href: '/assets/css/app.css' }],
