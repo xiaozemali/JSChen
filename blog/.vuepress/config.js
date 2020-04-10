@@ -402,7 +402,7 @@ module.exports = {
       { text: '关于', link: '/pages/about/' },
       { text: '收藏书籍', link: '/pages/pdf/' },
       { text: '友情链接', link: '/pages/blogroll/' },
-      { text: 'GitHub', link: 'https://github.com/guestccc/blog' },
+      { text: 'GitHub', link: 'https://github.com/guestccc/guestccc.github.io' },
     ],
   },
   plugins: {
