@@ -38,10 +38,10 @@ sidebar: 'auto'
 - 熟悉 `JavaScript` 基础
 - 熟悉微信小程序开发
 - 熟悉 `git` 工作流
+- 掌握 `docker`,`nginx`,`jenkins`
 - 了解 `webpack` 使用
 - 了解 `node.js` 及相关技术的使用
 - 了解网络性能优化
-- 了解 `CI/CD` 
 - 了解计算机网络
 
 
