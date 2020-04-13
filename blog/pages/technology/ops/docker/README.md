@@ -157,19 +157,61 @@ Successfully tagged nginx:ccc2
 
 `docker build -t nginx:ccc2 -f dockerfile/Dockerfile.2 dockerfile`
 
-指定 dockerfile 目录 dockerfile/Dockerfile ，指定上下文 dockerfile ，
+指定 Dockerfile 目录 dockerfile/Dockerfile ，指定上下文为路径 dockerfile ，
 
-- docker pull
+--tag/-t 是tag，通常是 tag:name 格式或者 name 格式
 
-- docker image
+-f 指定要使用的 Dockerfile 的路径
 
-- docker run
+2. docker pull
 
-- docker stop
+`docker pull nginx`
 
-- docker rm
+3. docker image
 
-- docker-compose
+`docker images -a` 
+
+列出所有镜像
+
+-a 所有
+
+`docker images nginx`
+
+列出所有 REPOSITORY 为 nginx 的镜像
+
+`docker image prune`
+
+删除虚悬镜像
+
+4. docker run
+
+`docker run -d --name myNginx -p 8080:80 nginx:ccc`
+
+-d 后台运行
+
+--name 给容器命名
+
+-p 指定宿主端口:容器端口 映射
+
+nginx:ccc 指定基础镜像
+
+5. docker stop/start/restart
+
+`docker stop/start/restart nginx`
+
+停止，启动，重启 nginx 容器
+
+6. docker rm
+
+`docker rm nginx`
+
+删除 nginx 容器
+
+`docker rmi nginx`
+
+7. docker-compose
+
+
 
 参考链接
 
