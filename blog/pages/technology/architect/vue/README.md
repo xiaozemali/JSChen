@@ -10,8 +10,8 @@ vue 深入响应式的解决方案采用的式 es6 语法提供的 Object.define
 
 来一个 mdn 的表，方便记忆
 
-|configurable|	enumerable|	value|	writable|	get|	set|
-|--|--|--|--|--|--|
+||configurable|	enumerable|	value|	writable|	get|	set|
+|--|--|--|--|--|--|--|
 |数据描述符| 可以| 可以| 可以| 可以| 不可以| 不可以|
 |存取描述符| 可以| 可以| 不可以| 不可以| 可以| 可以|
 

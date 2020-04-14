@@ -19,7 +19,7 @@ docker流程简化: dockerfile --> docker image --> docker container
 
 下面来分别细品一下这三个东西
 
-### 1. dockerfile 
+## 1. dockerfile 
 
 这个东西就是一个文件，文件里面写一条又一条的 指令 ，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
 
@@ -39,7 +39,7 @@ RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
 
 这个层的概念挺重要的，docker 如今这么🔥，这种机制就是原因之一
 
-### 2. docker image 镜像
+## 2. docker image 镜像
 
 什么是镜像呢
 
@@ -140,7 +140,7 @@ Successfully tagged nginx:ccc2
 |第二层|`RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html`|`RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html`|同层且相同|
 |第三层|`RUN echo '<h1>Hello, Docker2!</h1>' > /usr/share/nginx/html/index.html`|`RUN echo '<h1>Hello, Docker3!</h1>' > /usr/share/nginx/html/index.html`|同层且不相同|
 
-#### 3. docker container 容器
+## 3. docker container 容器
 
 一句话，容器也是分层，区别在于，容器是运行时的，实实在在的在跑相应的镜像
 
@@ -150,7 +150,7 @@ Successfully tagged nginx:ccc2
 镜像所谓的的分层是对所有镜像中每一层整合后进行排版，存的只是尚未执行的执行过程的树状流程图，而容器是自己镜像所有层执行后的文件系统，也就是对于镜像而已，镜像与镜像之间可能共享某几层，而对于容器而言，容器和容器之间都是一份自己所属镜像运行的结果（这个结果其实就是所有层执行后，对文件系统的所有更改后的文件系统而已也就是文件而已）
 :::
 
-#### 4. 常用命令
+## 4. 常用命令
 
 1. docker build
 

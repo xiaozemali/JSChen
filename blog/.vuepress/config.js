@@ -273,7 +273,7 @@ module.exports = {
       // 运维小兴趣 docker
       '/pages/technology/ops/docker/': [
         {
-          title: 'docker常用命令',
+          title: 'docker基本操作',
           collapsable: true,
           sidebarDepth: 2,
           children:[
@@ -281,11 +281,11 @@ module.exports = {
           ]
         },  /* /foo/one.html */
         {
-          title: 'docker其他',
+          title: 'jenkins + docker 之持续构建持续部署(CI/CD)',
           collapsable: true,
           sidebarDepth: 2,
           children:[
-            '',
+            'jenkins',
           ]
         },
       ],
