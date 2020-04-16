@@ -396,13 +396,19 @@ module.exports = {
           },
         ]
       },
+      {
+        text:'更多',
+        items: [
+          { text: '随笔', link: '/pages/essay/'},
+          { text: '名言小课堂', link: '/pages/saying/'},
+          { text: '关于', link: '/pages/about/' },
+          { text: '收藏书籍', link: '/pages/pdf/' },
+          { text: '友情链接', link: '/pages/blogroll/' },
+          { text: '故事', link: '/pages/story/' },
+          { text: 'GitHub', link: 'https://github.com/guestccc/guestccc.github.io' },
+        ]
+      },
       // 随笔 essay
-      { text: '随笔', link: '/pages/essay/'},
-      { text: '名言小课堂', link: '/pages/saying/'},
-      { text: '关于', link: '/pages/about/' },
-      { text: '收藏书籍', link: '/pages/pdf/' },
-      { text: '友情链接', link: '/pages/blogroll/' },
-      { text: 'GitHub', link: 'https://github.com/guestccc/guestccc.github.io' },
     ],
   },
   plugins: {
