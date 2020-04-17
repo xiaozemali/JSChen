@@ -323,8 +323,8 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children:[
-            '',
             '4-8',
+            '',
             'pen',
           ]
         },  /* /foo/one.html */
@@ -359,9 +359,9 @@ module.exports = {
       {
         text: '技术提升',
         items: [
-          // 前端架构师之路 architect
+          // 前端进阶之路 architect
           { 
-            text: '前端架构师之路', 
+            text: '前端进阶之路', 
             items: [
               { text: 'javaScript基础', link: '/pages/technology/architect/base/' },
               { text: '计算机网络', link: '/pages/technology/architect/network/' },

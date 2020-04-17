@@ -1,5 +1,7 @@
 // head 头部引入 js meta icon
 module.exports = [
+  // ['meta', { "http-equiv": 'x-dns-prefetch-control', content: 'on'}],//打开和关闭DNS预读取
+  ['link', { rel: 'dns-prefetch', href: '//blog.jschen.cc'}],//强制查询特定主机名
   ['link', { rel: 'icon', href: '/assets/img/LOGO.png',type:"image/png"}],
   // 百度收录
   ['script', { type: 'text/javascript', src: '/assets/sitemap/baidu.js' }],

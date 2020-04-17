@@ -23,7 +23,7 @@
 
 ## 技术提升
 
-一. 前端架构师之路
+一. 前端进阶之路
 
 1. [javaScript 基础](https://blog.jschen.cc/pages/technology/architect/base/)
 2. [计算机网络](https://blog.jschen.cc/pages/technology/architect/network/)

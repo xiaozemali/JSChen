@@ -1,11 +1,11 @@
 module.exports = [
-  // 前端架构师之路 architect
+  // 前端进阶之路 architect
   {
     text: '技术提升2123',
     items: [
       // javaScript基础 base
       { 
-        text: '前端架构师之路', 
+        text: '前端进阶之路', 
         items: [
           { text: 'javaScript基础', link: '/pages/architect/base/' },
           { text: '计算机网络', link: '/pages/architect/network/' },

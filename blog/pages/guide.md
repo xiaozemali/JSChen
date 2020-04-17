@@ -20,7 +20,7 @@ sidebar: auto
 
 ## 技术提升
 
-1. 前端架构师之路
+1. 前端进阶之路
 
     1. [javaScript基础](/pages/technology/architect/base/)
     2. [计算机网络](/pages/technology/architect/network/)
