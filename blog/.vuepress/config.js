@@ -392,7 +392,7 @@ module.exports = {
           },
           { 
             text: '面试准备', 
-            link: '/pages/interview/plan/'
+            link: '/pages/interview/plan/4-8/'
           },
         ]
       },
