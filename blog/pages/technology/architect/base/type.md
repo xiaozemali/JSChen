@@ -37,16 +37,10 @@
 
 ```js
 function type(i) {
-  if(i == null) {// ie6中，typeof null === 'object',toString = [object object]
+  if(i == void 0) {// ie6中，typeof null === 'object',toString = [object object]
     return i + ''
   }
-  return typeof i !== 'object'?typeof i:Object.prototype.toString.call(i).toLowerCase().replace('[object ','').replace(']','')
-}
-
-
-Object.prototype.whatType = function (){
-  if(this === null) return null + ''
-  return typeof this !== 'object'?typeof this
+  return typeof i !== 'object' ? typeof i : Object.prototype.toString.call(i).toLowerCase().replace('[object ','').replace(']','')
 }
 ```
 
@@ -67,10 +61,4 @@ console.log(auto instanceof Car);
 
 console.log(auto instanceof Object);
 // expected output: true
-```
-
-**Object.prototype.toString**
-
-```js
-Object.prototype.toString.call()
 ```

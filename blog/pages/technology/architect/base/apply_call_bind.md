@@ -46,11 +46,6 @@ test.jschenApply(obj,[1,2,3])
 // 1,2,3,{name: 'jsChen'}
 ```
 
-测试用例
-
-```js
-
-```
 
 ## call 模拟实现
 
@@ -66,10 +61,37 @@ Function.prototype.jschenCall = function(context){
   delete context._fn
   return result
 }
+
+// 测试用例
+var obj = {name: 'jsChen'};
+function test(a,b,c){
+  console.log(a,b,c,this)
+}
+test.jschenCall(obj,1,2,3)
+// 1,2,3,{name: 'jsChen'}
 ```
 
 ## bind 模拟实现
 
+简单版，不适配 `new`
+
+```js
+Function.prototype.jschenBind = function(context){
+  let fn = this
+  let args = Array.prototype.slice.call(arguments,1)
+  return function(){
+    return fn.apply(context,args.concat(Array.prototype.slice.call(arguments)))
+  }
+}
+
+// 测试用例
+var obj = {name: 'jsChen'};
+function test(a,b,c){
+  console.log(a,b,c,this)
+}
+test.jschenBind(obj,1,2)(3)
+// 1,2,3,{name: 'jsChen'}
+```
 
 ## 相关链接
 

@@ -2,9 +2,9 @@
 
 ## 语义化
 
-### 属性
+## 属性
 
-#### title 和 alt 的区别
+### title 和 alt 的区别
 
 ```html
 <img src="#" alt="alt信息" />
@@ -26,9 +26,9 @@ title属性有一个很好的用途，即为链接添加描述性文字，特别
 
 :::
 
-### dom 操作
+## dom 操作
 
-#### addEventListener
+### addEventListener
 
 事件机制、事件流、事件传播
 
@@ -270,6 +270,6 @@ stopPropagation， stopImmediatePropagation 都可以阻止冒泡和捕获，但
 
 指定元素 myP ，阻止了向外层冒泡，并且阻止了剩下的一个绑定事件
 
-#### 事件代理
+### 事件代理
 
 把子组件需要触发的相同事件注册在父节点上
