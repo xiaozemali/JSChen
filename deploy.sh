@@ -18,5 +18,5 @@ git add .
 git commit -m 'deploy'
 git push origin master
 
-rm -rf deploy
 cd ../../
+rm -rf deploy
