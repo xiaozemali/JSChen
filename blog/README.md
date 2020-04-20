@@ -2,7 +2,7 @@
 home: true
 heroImage: /assets/img/LOGO.png
 heroText: JSChen
-tagline: 新博客转移中，旧博客是Hexo做的，准备废弃掉，最近在面试所以转移的比较慢哈，有些文章以前写的比较稚嫩，慢慢改...
+tagline: 新博客转移中，最近找工作，很多文章整理完没检查，不过还在坚持...
 # 个人技术提升的知识体系，终身学习的信仰
 actionText: 欢迎指点 →
 actionLink: /pages/guide/

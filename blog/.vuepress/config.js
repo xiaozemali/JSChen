@@ -31,6 +31,7 @@ module.exports = {
             'this',
             'execution_scope',
             'new',
+            'export',
             'apply_call_bind',
             'type',
             'event-loop',

@@ -25,11 +25,49 @@ JSChen.apply(obj,[18])
 ### 1. 属于函数的静态方法
 
 ```js
-Function
+Function.prototype.jschenApply = function (context,arr){
+  context = context || window
+  context._fn = this
+  let args = []
+  for(let i = 0; i < arr.length; i += 1) {
+    args.push('arr[' + i + ']')
+  }
+  let result = eval('context._fn(' + args + ')')
+  delete context._fn
+  return result
+}
+
+// 测试用例
+var obj = {name: 'jsChen'};
+function test(a,b,c){
+  console.log(a,b,c,this)
+}
+test.jschenApply(obj,[1,2,3])
+// 1,2,3,{name: 'jsChen'}
 ```
 
+测试用例
+
+```js
+
+```
 
 ## call 模拟实现
+
+```js
+Function.prototype.jschenCall = function(context){
+  context = context || window
+  context._fn = this
+  let args = []
+  for(let i = 1; i < arguments.length; i += 1) {
+    args.push('arguments[' + i + ']')
+  }
+  let result = eval('context._fn(' + args + ')')
+  delete context._fn
+  return result
+}
+```
+
 ## bind 模拟实现
 
 
