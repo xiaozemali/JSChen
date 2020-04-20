@@ -4,6 +4,11 @@
 侵权请联系，马上下架 1009078602@qq.com
 :::
 
+::: warning 注意
+全部下架了！！！
+:::
+
+```
 ## JavaScript
 
 <a href="/assets/pdf/你不知道的JavaScript(上卷).pdf" target="block">你不知道的JavaScript(上卷)</a>
@@ -23,3 +28,4 @@
 ## 计算机网络
 
 <a href="/assets/pdf/图解HTTP+彩色版.pdf" target="block">图解HTTP+彩色版</a>
+```
