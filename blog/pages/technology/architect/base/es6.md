@@ -64,15 +64,15 @@ Reflect.deleteProperty(obj,'b')
 
 ```js
 class JSChen{
-  name = 'jschen'
-  constructor (name) {
-    this.name = name
+  name = 'jschen' // 实例属性的新写法，相当于直接在 constructor 里写 this.name = 'jschen'
+  constructor (age) { // 构造函数 JSChen.prototype.constructor
+    this.age = age
     this.getName = this.getName.bind(this)
   }
-  getName(){
+  getName(){ // 原型中的函数 JSChen.prototype.getName
     return this.name
   }
-  static sayHi(){
+  static sayHi(){ // 静态方法 JSChen.sayHi
     console.log('我是静态方法，我定义在类对象上')
   }
 }
@@ -86,7 +86,7 @@ class JSChen{
 
 [tc39 -- github](https://github.com/tc39/proposal-private-methods)
 
-这个按是第 Stage 3
+这个提案是第 Stage 3
 
 也就是说如果用 babel-loader 的话 也是用的Stage 3
 

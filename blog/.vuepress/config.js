@@ -38,7 +38,6 @@ module.exports = {
             'code',
             'css',
             'html',
-            'test',
           ]
         },  /* /foo/one.html */
         {
