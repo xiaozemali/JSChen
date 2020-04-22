@@ -41,7 +41,29 @@ Reflect.deleteProperty(obj,'b')
 
 ## Proxy
 
-拦截器，可以对外界的访问进行过滤和改写。
+代理拦截器，可以对外界的访问进行过滤和改写。
+
+```js
+var obj = new Proxy(
+  {},
+  {
+    get: function(target, propKey, receiver) {
+      console.log(`getting ${propKey}!`)
+      return Reflect.get(target, propKey, receiver)
+    },
+    set: function(target, propKey, value, receiver) {
+      console.log(`setting ${propKey}!`)
+      return Reflect.set(target, propKey, value, receiver)
+    }
+  }
+)
+obj.count = 1
+//  setting count!
+++obj.count
+//  getting count!
+//  setting count!
+//  2
+```
 
 
 - get(target, propKey, receiver)：拦截对象属性的读取，比如proxy.foo和proxy['foo']。
@@ -57,6 +79,8 @@ Reflect.deleteProperty(obj,'b')
 - setPrototypeOf(target, proto)：拦截Object.setPrototypeOf(proxy, proto)，返回一个布尔值。如果目标对象是函数，那么还有两种额外操作可以拦截。
 - apply(target, object, args)：拦截 Proxy 实例作为函数调用的操作，比如proxy(...args)、proxy.call(object, ...args)、proxy.apply(...)。
 - construct(target, args)：拦截 Proxy 实例作为构造函数调用的操作，比如new proxy(...args)。
+
+
 
 ## set
 

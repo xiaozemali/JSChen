@@ -179,7 +179,7 @@ function JSChen(){
 <jschen scope>: [ <global execution context>.AO, <JSChen execution context>.AO, <jschen execution context>.AO ]
 ```
 
-### with
+## with
 
 ```js
 function foo(obj1, obj2) {
@@ -195,8 +195,7 @@ foo('obj1', {})
 
 如果 `with` 执行块中只是用了指定对象的变量，那么减少了作用域链查找的长度
 
-如果 `with` 执行块中用了作用域链上非顶端的变量，那么会加长了作用域链查找的长度#### 区别
-
+如果 `with` 执行块中用了作用域链上非顶端的变量，那么会加长了作用域链查找的长度
 
 
 ## 闭包

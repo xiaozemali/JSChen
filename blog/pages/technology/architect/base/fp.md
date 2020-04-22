@@ -42,22 +42,22 @@ function debounce(fn, s, immediate) {
 - star/Unstar
 
 > 连续点击可以出发多次
-
 ```js
-function throttle(fn, s) {
-  let now = 0
+function throttle(fn,time){
+  let last = 0
+  let result
   let timer
-  return function(...val) {
-    if (timer) clearTimeout(timer)
-    if (+new Date() - now > s * 1000) {
-      fn.apply(this, val)
-      now = +new Date()
+  return function (...args){
+    clearTimeout(timer)
+    if(!last || last + time*1000 < +new Date()) {
+      last = +new Date()
+      result = fn.apply(this,args)
     } else {
       timer = setTimeout(() => {
-        timer = null
-        fn.apply(this, val)
-      }, s * 1000)
+        result = fn.apply(this,args)
+      },time * 1000)
     }
+    return result
   }
 }
 ```

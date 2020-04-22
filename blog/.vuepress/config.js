@@ -31,7 +31,6 @@ module.exports = {
             'this',
             'execution_scope',
             'new',
-            'export',
             'apply_call_bind',
             'type',
             'event-loop',
@@ -39,21 +38,22 @@ module.exports = {
             'css',
             'html',
           ]
-        },  /* /foo/one.html */
-        {
-          title: '函数式编程',
-          collapsable: true,
-          sidebarDepth: 2,
-          children:[
-            'fp'
-          ]
-        }, 
+        },
         {
           title: 'es6',
           collapsable: true,
           sidebarDepth: 2,
           children:[
             'es6',
+            'export',
+          ]
+        },   /* /foo/one.html */
+        {
+          title: '函数式编程',
+          collapsable: true,
+          sidebarDepth: 2,
+          children:[
+            'fp'
           ]
         }, 
         {
@@ -108,6 +108,7 @@ module.exports = {
           sidebarDepth: 2,
           children:[
             '',
+            'router'
           ]
         },  /* /foo/one.html */
         {
@@ -115,7 +116,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children:[
-            '',
+            'nuxt',
           ]
         }, 
         {

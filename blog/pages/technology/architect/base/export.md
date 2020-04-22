@@ -5,11 +5,11 @@
 
 可以这样理解：
 
-在当前作用域提供了两个变量，module 和 exports
+在当前作用域提供了两个变量， `module` 和 `exports`
 
-module.exports 和 exports 指向的是同一个对象地址
+`module.exports` 和 `exports` 指向的是同一个对象地址
 
-而最终 require 导入的是 module.exports
+而最终 `require` 导入的是 `module.exports`
 
 ```js
 // node.js
@@ -20,7 +20,7 @@ console.log(require('./node.js'))
 // {}
 ```
 
-exports 得到了一个新对象的地址，module.exports 指向的对象没有更改，require 导入的永远都是 module.exports
+`exports` 得到了一个新对象的地址， `module.exports` 指向的对象没有更改，require 导入的永远都是 `module.exports`
 
 ```js
 // node.js
@@ -31,7 +31,7 @@ console.log(require('./node.js'))
 // {name:'ccc'}
 ```
 
-exports 地址指向的对象添加了新的属性，module.exports 指向的对象发生了更改，require 导入的永远都是 module.exports
+`exports` 地址指向的对象添加了新的属性， `module.exports` 指向的对象发生了更改，require 导入的永远都是 `module.exports`
 
 ```js
 // node.js
@@ -43,13 +43,13 @@ console.log(require('./node.js'))
 // 1
 ```
 
-exports 地址指向的对象添加了新的属性，module.exports 得到了一个新的值，require 导入的永远都是 module.exports
+`exports` 地址指向的对象添加了新的属性， `module.exports` 得到了一个新的值， `require` 导入的永远都是 `module.exports`
 
 ## es6 export export default
 
 特点：静态分析，运行时不允许外部对引入的接口进行更改，当然接口的属性是可以修改的
 
-::: 提示
+::: tip 提示
 import 会自动提升
 :::
 
@@ -65,9 +65,9 @@ export { b }
 import { a, b } from './a.js'
 ```
 
-上面 a.js 的导出，是导出指定名称的接口，不是值
+上面 `a.js` 的导出，是导出指定名称的接口，不是值
 
-而 b.js 是通过 {} 导入指定命名接口
+而 `b.js` 是通过 `{}` 导入指定命名接口
 
 ### 2. export import \*
 
@@ -101,7 +101,7 @@ import mode from './a.js'
 console.log(mode)
 ```
 
-export default 和 export 可以同时存在
+`export default` 和 `export` 可以同时存在
 
 ```js
 // a.js
@@ -125,7 +125,7 @@ console.log(mode, a, b)
 
 ### 4. export from
 
-export 和 import 的复合写法，先输入后输出
+`export` 和 `import` 的复合写法，先输入后输出
 
 ```js
 // a.js
@@ -178,7 +178,7 @@ export { wx } from './wx.js'
 import { config, wx } from './constants/index.js'
 ```
 
-## es2020 提案 import() 动态加载
+## es2020 提案 `import()` 动态加载
 
 ```js
 const main = document.querySelector('main')
